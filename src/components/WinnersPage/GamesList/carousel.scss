@@ -1,0 +1,11 @@
+.carousel-container {
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  touch-action: pan-x;
+}
+.carousel-track {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

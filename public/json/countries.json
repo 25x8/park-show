@@ -1,0 +1,210 @@
+[
+    {
+        "id": "703e24a5-bb25-42d6-899b-aeca55d82bc7",
+        "flag": "/flags/ao.png",
+        "name": {
+            "en": "Angola",
+            "ru": "Ангола"
+        }
+    },
+    {
+        "id": "56ac3f4d-a027-4b28-9082-228c2c36b766",
+        "flag": "/flags/am.png",
+        "name": {
+            "en": "Armenia",
+            "ru": "Армения"
+        }
+    },
+    {
+        "id": "30f0447d-f49d-4a93-987e-1cf59924e421",
+        "flag": "/flags/az.png",
+        "name": {
+            "en": "Azerbaijan",
+            "ru": "Азербайджан"
+        }
+    },
+    {
+        "id": "aab201ac-d54d-44f9-ac9c-161f6a1a5917",
+        "flag": "/flags/by.png",
+        "name": {
+            "en": "Belarus",
+            "ru": "Белоруссия"
+        }
+    },
+    {
+        "id": "182525b6-66e1-405f-baee-a1435bd19200",
+        "flag": "/flags/eg.png",
+        "name": {
+            "en": "Egypt",
+            "ru": "Египет"
+        }
+    },
+    {
+        "id": "6cef0617-d59b-4d99-a91d-7942f7e64de9",
+        "flag": "/flags/ve.png",
+        "name": {
+            "en": "Venezuela",
+            "ru": "Венесуэла"
+        }
+    },
+    {
+        "id": "c9776a4e-88f6-4e64-badc-89aa2d186b24",
+        "flag": "/flags/cg.png",
+        "name": {
+            "en": "Kongo",
+            "ru": "Конго"
+        }
+    },
+    {
+        "id": "fa8137f0-2db6-4a05-b68b-09c4be01ae76",
+        "flag": "/flags/cn.png",
+        "name": {
+            "en": "China",
+            "ru": "Китай"
+        }
+    },
+    {
+        "id": "9dea5597-b48f-4e89-ba4e-4c498d63b9e3",
+        "flag": "/flags/dz.png",
+        "name": {
+            "en": "Aljir",
+            "ru": "Алжир"
+        }
+    },
+    {
+        "id": "89a4ee85-58e1-4a6a-9ed2-542010d1817f",
+        "flag": "/flags/gq.png",
+        "name": {
+            "en": "Equatorial Guinea",
+            "ru": "Экваториальная гвинея"
+        }
+    },
+    {
+        "id": "d4ee4ea2-5cb1-4938-8697-3e9c95436f68",
+        "flag": "/flags/ir.png",
+        "name": {
+            "en": "Iran",
+            "ru": "Иран"
+        }
+    },
+    {
+        "id": "19d5c7e2-6674-4db8-8ef3-4a169b4a411a",
+        "flag": "/flags/in.png",
+        "name": {
+            "en": "India",
+            "ru": "Индия"
+        }
+    },
+    {
+        "id": "e99f6b17-6035-4399-a0d5-c19be5119fb8",
+        "flag": "/flags/kg.png",
+        "name": {
+            "en": "Kirgizia",
+            "ru": "Киргизия"
+        }
+    },
+    {
+        "id": "fe937426-e1a5-4e02-b905-c33077d58855",
+        "flag": "/flags/kz.png",
+        "name": {
+            "en": "Kazahstan",
+            "ru": "Казахстан"
+        }
+    },
+    {
+        "id": "2e5be65c-69a3-43fe-9bd6-44bb059c9c42",
+        "flag": "/flags/cu.png",
+        "name": {
+            "en": "Cuba",
+            "ru": "Куба"
+        }
+    },
+    {
+        "id": "2a4d5bed-9e08-4166-8b35-00a54770f30d",
+        "flag": "/flags/la.png",
+        "name": {
+            "en": "Laos",
+            "ru": "Лаос"
+        }
+    },
+    {
+        "id": "76269f13-03d1-47cb-b86f-27fa1904f590",
+        "flag": "/flags/mm.png",
+        "name": {
+            "en": "Mianma",
+            "ru": "Мьянма"
+        }
+    },
+    {
+        "id": "5194fd41-5280-47e5-b400-c30ef78af449",
+        "flag": "/flags/mn.png",
+        "name": {
+            "en": "Mongolia",
+            "ru": "Монголия"
+        }
+    },
+    {
+        "id": "6a74e604-c03b-4158-b11f-41a856119db2",
+        "flag": "/flags/mz.png",
+        "name": {
+            "en": "Mozambik",
+            "ru": "Мозамбик"
+        }
+    },
+    {
+        "id": "c3b9a122-4077-4635-988e-39633bdcaeb7",
+        "flag": "/flags/rs.png",
+        "name": {
+            "en": "Serbia",
+            "ru": "Сербия"
+        }
+    },
+        {
+        "id": "6c1007ee-1c86-4489-bb62-c209b5f0f4b3",
+        "flag": "/flags/sy.png",
+        "name": {
+            "en": "Syria",
+            "ru": "Сирия"
+        }
+    },
+    {
+        "id": "b7d1e6e0-094c-49fb-9db0-5cd76fdd8b63",
+        "flag": "/flags/ru.png",
+        "name": {
+            "en": "Russia",
+            "ru": "Россия"
+        }
+    },
+    {
+        "id": "bc77450a-f5c9-4aa5-9e99-8b66b4ac27d5",
+        "flag": "/flags/tj.png",
+        "name": {
+            "en": "Tadjikistan",
+            "ru": "Таджикистан"
+        }
+    },
+    {
+        "id": "841d7368-0266-4174-8b55-c52186e2377d",
+        "flag": "/flags/uz.png",
+        "name": {
+            "en": "Uzbekistan",
+            "ru": "Узбекистан"
+        }
+    },
+    {
+        "id": "937a2944-70ba-48a0-88a2-ea0ca48c768f",
+        "flag": "/flags/vn.png",
+        "name": {
+            "en": "Vietnam",
+            "ru": "Вьетнам"
+        }
+    },
+    {
+        "id": "33912df2-50a7-44bc-9df4-4c4f535fa219",
+        "flag": "/flags/za.png",
+        "name": {
+            "en": "UAR",
+            "ru": "ЮАР"
+        }
+    }
+]

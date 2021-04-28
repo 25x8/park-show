@@ -1,0 +1,374 @@
+[
+    {
+        "description": {
+            "en": "Competitions for tank crews.",
+            "ru": "Соревнования танковых экипажей."
+        },
+        "id": "524c8e28-24d8-4a52-ac19-30cd1f49ffdf",
+        "image": "/games-icons/1-biatlon.png",
+        "name": {
+            "en": "Tank biathlon",
+            "ru": "Танковый биатлон"
+        }
+    },
+    {
+        "description": {
+            "en": "Competitions of the crews of infantry fighting vehicles.",
+            "ru": "Соревнования экипажей боевых машин пехоты."
+        },
+        "id": "d47695e1-6fe4-4a76-b356-9d41c8bced24",
+        "image": "/games-icons/2-natisk.png",
+        "name": {
+            "en": "Suvorov onslaught",
+            "ru": "Суворовский натиск"
+        }
+    },
+    {
+        "description": {
+            "en": "Sniper competition.",
+            "ru": "Соревнования снайперов."
+        },
+        "id": "2cb15ab7-b053-43e8-974f-ecc17c442830",
+        "image": "/games-icons/3-rubezh.png",
+        "name": {
+            "en": "Snaiper frontier",
+            "ru": "Снайперский рубеж"
+        }
+    },
+    {
+        "description": {
+            "en": "Flight Crew Competitions.",
+            "ru": "Соревнования летных экипажей."
+        },
+        "id": "4e4252c5-9a5d-40b0-a0e6-bf76aa2d038f",
+        "image": "/games-icons/4-darts.png",
+        "name": {
+            "en": "Aviadarts",
+            "ru": "Авиадартс"
+        }
+    },
+    {
+        "description": {
+            "en": "Airborne platoon competition.",
+            "ru": "Соревнования десантных взводов."
+        },
+        "id": "8926d530-73d7-45f2-9ed2-7bffaa6c177a",
+        "image": "/games-icons/5-desvzvod.png",
+        "name": {
+            "en": "Airborn platoon",
+            "ru": "Десантный взвод"
+        }
+    },
+    {
+        "description": {
+            "en": "Competitions of the Seaborne Assault.",
+            "ru": "Соревнования подразделений морской пехоты."
+        },
+        "id": "b1d32be0-e9ed-42c8-bc94-524377debb28",
+        "image": "/games-icons/6-mordes.png",
+        "name": {
+            "en": "Seaborne Assault",
+            "ru": "Морской десант"
+        }
+    },
+    {
+        "description": {
+            "en": "Сompetition of crews of surface ships.",
+            "ru": "Соревнования экипажей надводных кораблей."
+        },
+        "id": "7bfd1d3c-dc8d-409a-afda-ba5d1a8d74d7",
+        "image": "/games-icons/7-more.png",
+        "name": {
+            "en": "Sea Cup",
+            "ru": "Кубок моря"
+        }
+    },
+    {
+        "description": {
+            "en": "Diving competition.",
+            "ru": "Соревнования водолазов."
+        },
+        "id": "4d7f32f2-3bf2-4364-8a8b-35da6de1fd2a",
+        "image": "/games-icons/8-glubina.png",
+        "name": {
+            "en": "Depth",
+            "ru": "Глубина"
+        }
+    },
+    {
+        "description": {
+            "en": "Mortar Battery Competition.",
+            "ru": "Соревнования минометных расчетов."
+        },
+        "id": "4244576c-1a23-4348-9e5f-83d7b5d9f201",
+        "image": "/games-icons/9-artogon.png",
+        "name": {
+            "en": "Masters of Artillery Fire",
+            "ru": "Мастера артиллерийского огня"
+        }
+    },
+    {
+        "description": {
+            "en": "Weapon repair platoon competition.",
+            "ru": "Соревнования ремонтных взводов вооружения."
+        },
+        "id": "5a6dc3cd-9dba-44c6-b6a8-19a02fc187b5",
+        "image": "/games-icons/10-oruzheinik.png",
+        "name": {
+            "en": "«Gunsmith Master",
+            "ru": "Мастер-оружейник"
+        }
+    },
+    {
+        "description": {
+            "en": "Competitions of air defense units.",
+            "ru": "Соревнования подразделений ПВО."
+        },
+        "id": "85e02fc5-2e82-49e0-a411-35eff6bfeb87",
+        "image": "/games-icons/11-nebo.png",
+        "name": {
+            "en": "Clear sky",
+            "ru": "Чистое небо"
+        }
+    },
+    {
+        "description": {
+            "en": "Communication divisions competitions.",
+            "ru": "Соревнования подразделений связи."
+        },
+        "id": "055fddd0-24d9-43f2-bde9-589ad52f12b4",
+        "image": "/games-icons/12-priem.png",
+        "name": {
+            "en": "Confident reception",
+            "ru": "Уверенный приём"
+        }
+    },
+    {
+        "description": {
+            "en": "Competition of military reconnaissance groups.",
+            "ru": "Соревнования групп войсковой разведки."
+        },
+        "id": "345d11c7-19d7-4ec7-bbf1-c2fe1dbcb4a9",
+        "image": "/games-icons/13-otlichniki.png",
+        "name": {
+            "en": "Army Scout Masters",
+            "ru": "Отличники войсковой разведки"
+        }
+    },
+    {
+        "description": {
+            "en": "Competitions of pontoon-ferry units.",
+            "ru": "Соревнования понтонно-переправочных подразделений."
+        },
+        "id": "50284551-4881-43a6-8eb6-8cdb84c571d5",
+        "image": "/games-icons/14-voda.png",
+        "name": {
+            "en": "Open Water",
+            "ru": "Открытая вода"
+        }
+    },
+    {
+        "description": {
+            "en": "Competition of engineering and sapper divisions.",
+            "ru": "Соревнования инженерно-саперных подразделений."
+        },
+        "id": "a0b6b902-cf32-4ba3-8a20-d8e2b8e89673",
+        "image": "/games-icons/15-marshrut.png",
+        "name": {
+            "en": "Safe route",
+            "ru": "Безопасный маршрут"
+        }
+    },
+    {
+        "description": {
+            "en": "Competitions for crews of engineering weapons.",
+            "ru": "Соревнования экипажей машин инженерного вооружения."
+        },
+        "id": "1af960ae-b064-48ab-9e8a-c15fc61fbda4",
+        "image": "/games-icons/16-formula.png",
+        "name": {
+            "en": "Engineering formula",
+            "ru": "Инженерная формула"
+        }
+    },
+    {
+        "description": {
+            "en": "Competitions for radiation, chemical and biological reconnaissance crews.",
+            "ru": "Соревнования экипажей радиационной, химической и биологической разведки."
+        },
+        "id": "03e027c5-6142-49c0-81bb-261cdb266394",
+        "image": "/games-icons/17-sreda.png",
+        "name": {
+            "en": "Safe environment",
+            "ru": "Безопасная среда"
+        }
+    },
+    {
+        "description": {
+            "en": "Improvements of specialists of auto-technical and tank-technical support.",
+            "ru": "Совернования специалистов автотехнического и танкотехнического обеспечения."
+        },
+        "id": "f9a9699d-19a7-482a-82b4-b5a533d5f41a",
+        "image": "/games-icons/18-atb.png",
+        "name": {
+            "en": "Masters of armored vehicles",
+            "ru": "Мастера автобронетанковой техники"
+        }
+    },
+    {
+        "description": {
+            "en": "Mountain Division Competitions.",
+            "ru": "Соревнования горных подразделений."
+        },
+        "id": "aa957fed-ecf6-4af0-87ab-cf854ee51345",
+        "image": "/games-icons/19-elbrus.png",
+        "name": {
+            "en": "Elbrus ring",
+            "ru": "Эльбрусское кольцо"
+        }
+    },
+    {
+        "description": {
+            "en": "True friend.",
+            "ru": "Совернования специалистов служебного собаководства."
+        },
+        "id": "09d09c6e-9639-45cf-aa83-b63ccd56910c",
+        "image": "/games-icons/20-drug.png",
+        "name": {
+            "en": "True friend",
+            "ru": "Верный друг"
+        }
+    },
+    {
+        "description": {
+            "en": "Competitions for medical personnel.",
+            "ru": "Соревнования медицинского персонала."
+        },
+        "id": "fc50a981-4a0d-4951-b490-c600043d7fc2",
+        "image": "/games-icons/21-med.png",
+        "name": {
+            "en": "Military Medical Relay Race",
+            "ru": "Военно-медицинская эстафета"
+        }
+    },
+    {
+        "description": {
+            "en": "Competition for food service specialists.",
+            "ru": "Соревнования специалистов продовольственной службы."
+        },
+        "id": "8635fb34-0aaa-48cf-9457-373c4dfb5154",
+        "image": "/games-icons/22-kuhnya.png",
+        "name": {
+            "en": "Field kitchen",
+            "ru": "Полевая кухня"
+        }
+    },
+    {
+        "description": {
+            "en": "Military Police Competition.",
+            "ru": "Соревнования военнослужащих военной полиции."
+        },
+        "id": "702e3ed0-34e8-4278-a898-e921faed4bf5",
+        "image": "/games-icons/23-strazh.png",
+        "name": {
+            "en": "Guardian of Order",
+            "ru": "Страж порядка"
+        }
+    },
+    {
+        "description": {
+            "en": "Competitions of military crews on military vehicles.",
+            "ru": "Соревнования экипажей на военной на военной автомобильной техники."
+        },
+        "id": "9dd3d41f-6c9e-4d78-9a00-f03907f64e86",
+        "image": "/games-icons/24-ralli.png",
+        "name": {
+            "en": "Military Rally",
+            "ru": "Военное ралли"
+        }
+    },
+    {
+        "description": {
+            "en": "Competitions of military professional skills of servicemen.",
+            "ru": "Соревнования военно-профессионального мастерства военнослужащих."
+        },
+        "id": "b7583aab-67a7-44bf-b350-340f0669e06f",
+        "image": "/games-icons/25-voin.png",
+        "name": {
+            "en": "Warrior of the Peace",
+            "ru": "Воин мира"
+        }
+    },
+    {
+        "description": {
+            "en": "Unmanned aerial vehicle crew competition.",
+            "ru": "Соревнование экипажей БПЛА."
+        },
+        "id": "cdd6eb1a-3709-41e3-8d1a-e41e924006b9",
+        "image": "/games-icons/26-bla.png",
+        "name": {
+            "en": "Falconry",
+            "ru": "Соколиная охота"
+        }
+    },
+    {
+        "description": {
+            "en": "Competition of inspectors of the military automobile inspection.",
+            "ru": "Соревнования инспекторов военной автомобильной инспекции."
+        },
+        "id": "73e51b50-707c-4692-9197-c1ebff7230af",
+        "image": "/games-icons/27-patrul.png",
+        "name": {
+            "en": "Road Patrol",
+            "ru": "Дорожный патруль"
+        }
+    },
+    {
+        "description": {
+            "en": "Rescue teams competition.",
+            "ru": "Состязания аварийно-спасательных формирований."
+        },
+        "id": "fb1be974-fd32-4ffd-9784-c495c8cbcee4",
+        "image": "/games-icons/28-raion.png",
+        "name": {
+            "en": "Emergency Area",
+            "ru": "Аварийный район"
+        }
+    },
+    {
+        "description": {
+            "en": "Competitions of equestrian units.",
+            "ru": "Соревнования конных подразделений."
+        },
+        "id": "c8efbe5f-607f-40cd-b6d0-683fb55390ea",
+        "image": "/games-icons/29-koni.png",
+        "name": {
+            "en": "Equestrian marathon.",
+            "ru": "Конный марафон"
+        }
+    },
+    {
+        "description": {
+            "en": "Competitions of special purpose units.",
+            "ru": "Соревнования подразделений специального назначений."
+        },
+        "id": "b5343f48-db06-4f38-9bcd-1bcb69c2b3a4",
+        "image": "/games-icons/30-zvezda.png",
+        "name": {
+            "en": "Polar Star.",
+            "ru": "Полярная звезда"
+        }
+    },
+    {
+        "description": {
+            "en": "Competitions of military personnel of mountain units in winter conditions.",
+            "ru": "Соревнования военнослужащих горных подразделений в зимних условиях."
+        },
+        "id": "ee9d6b64-0b82-47a0-93e9-5eeea2fa9f2e",
+        "image": "/games-icons/31-sayan-march.png",
+        "name": {
+            "en": "Sayan march",
+            "ru": "Саянский марш"
+        }
+    }
+]

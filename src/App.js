@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import {WinnersPage} from "./components/WinnersPage/WinnersPage";
+import {useEffect, useState} from "react";
+import {useDispatch} from "react-redux";
+import {fetchData} from "./redux/feature/fetchData";
+import {useIdleTimer} from "react-idle-timer";
+import {WaitScreen} from "./components/WaitScreen/WaitScreen";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const dispatch = useDispatch();
+    const [afk, setAfk] = useState(false);
+
+    useEffect(() => {
+        dispatch(fetchData())
+    }, [])
+
+    const handleOnIdle = event => {
+        setAfk(true);
+    }
+
+    const handleOnActive = event => {
+        setAfk(false);
+    }
+
+    const handleOnAction = event => {
+
+    }
+
+    const {getRemainingTime, getLastActiveTime} = useIdleTimer({
+        timeout: 8000,
+        onIdle: handleOnIdle,
+        onActive: handleOnActive,
+        onAction: handleOnAction,
+        debounce: 500
+    })
+
+
+    return (
+        <div>
+            {afk && <WaitScreen/>}
+            <div className="App">
+                <WinnersPage/>
+            </div>
+        </div>
+    )
 }
 
 export default App;
