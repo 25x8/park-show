@@ -27,7 +27,7 @@ function App() {
     }
 
     const {getRemainingTime, getLastActiveTime} = useIdleTimer({
-        timeout: 8000,
+        timeout: 60000,
         onIdle: handleOnIdle,
         onActive: handleOnActive,
         onAction: handleOnAction,

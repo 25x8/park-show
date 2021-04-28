@@ -16,7 +16,7 @@ const WaitScreenBase = ({className}) => {
             <AliceCarousel
                 infinite={true}
                 autoPlay={true}
-                autoPlayInterval={100000}
+                autoPlayInterval={5000}
                 animationDuration={800}
                 animationType="fadeout"
                 disableButtonsControls={true}
