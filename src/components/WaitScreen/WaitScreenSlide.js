@@ -23,7 +23,7 @@ const WaitScreenSlideBase = ({className, winnerId}) => {
     }
 
     return (
-        <div className={className}>
+        <div className={`${className} screen-server`}>
             <div className="result-wrap">
                 {allWinnerGames.map((result, index) => {
                     return (
@@ -76,79 +76,80 @@ export const WaitScreenSlide = styled(WaitScreenSlideBase)`
   align-items: center;
   justify-content: space-between;
 
-
-  .modal__footer {
-    display: flex;
-
-    &--result {
+  .screen-server {
+    .modal__footer {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-  }
 
-  .result__rank, .result__score {
-    color: black;
-  }
-
-  .result-wrap {
-    margin-left: 8rem;
-    font-size: 3rem;
-    color: #fff;
-    font-weight: bold;
-    align-self: start;
-    margin-top: 9rem;
-  }
-
-  .game__icon {
-    height: 200px;
-  }
-
-  .game__text {
-    color: #f39324
-  }
-
-  .screen__info {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 8rem;
-
-  }
-
-  .screen__header {
-
-    max-width: 600px;
-    width: 600px;
-
-    min-height: 200px;
-    display: grid;
-    grid-template-columns: 180px 1fr;
-    align-items: center;
-
-
-    &--flag {
-      height: 6rem;
+      &--result {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
     }
 
-    &--title {
-      font-size: 3.5rem;
-      font-weight: bold;
+    .result__rank, .result__score {
       color: black;
     }
-  }
 
-  .screen__photo {
-    height: 600px;
-    width: 600px;
-    min-width: 600px;
-    box-shadow: 0 0 20px #f39324;
-    margin-bottom: 2rem;
+    .result-wrap {
+      margin-left: 8rem;
+      font-size: 3rem;
+      color: #fff;
+      font-weight: bold;
+      align-self: start;
+      margin-top: 9rem;
+    }
 
-    img {
-      width: 100%;
-      object-fit: cover;
+    .game__icon {
+      height: 200px;
+    }
+
+    .game__text {
+      color: #f39324
+    }
+
+    .screen__info {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 8rem;
+
+    }
+
+    .screen__header {
+
+      max-width: 600px;
+      width: 600px;
+
+      min-height: 200px;
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      align-items: center;
+
+
+      &--flag {
+        height: 6rem;
+      }
+
+      &--title {
+        font-size: 3.5rem;
+        font-weight: bold;
+        color: black;
+      }
+    }
+
+    .screen__photo {
+      height: 600px;
+      width: 600px;
+      min-width: 600px;
+      box-shadow: 0 0 20px #f39324;
+      margin-bottom: 2rem;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
     }
   }
 `;
