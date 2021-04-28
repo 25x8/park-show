@@ -29,12 +29,12 @@ const WaitScreenSlideBase = ({className, winnerId}) => {
                     return (
                         <div className="modal__footer" key={index}>
                             <div className="modal__footer--game">
-                                <div className="game__icon">
+                                <div className="_game__icon">
                                     <img src={result.game.image} alt=""/>
                                 </div>
                             </div>
                             <div className="modal__footer--result">
-                                <div className="game__text--year">{result.year} год</div>
+                                <div className="_game__text--year">{result.year} год</div>
                                 <div className="result__rank">
                                     {result.rank} место
                                 </div>
@@ -76,80 +76,81 @@ export const WaitScreenSlide = styled(WaitScreenSlideBase)`
   align-items: center;
   justify-content: space-between;
 
-  .screen-server {
-    .modal__footer {
-      display: flex;
 
-      &--result {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
+  .modal__footer {
+    display: flex;
+
+    &--result {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  .result__rank, .result__score {
+    color: black;
+  }
+
+  .result-wrap {
+    margin-left: 8rem;
+    font-size: 3rem;
+    color: #fff;
+    font-weight: bold;
+    align-self: start;
+    margin-top: 9rem;
+  }
+
+
+  ._game__icon {
+    height: 200px;
+  }
+
+  ._game__text--year {
+    font-size: 2rem;
+    color: #f39324
+  }
+
+  .screen__info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 8rem;
+
+  }
+
+  .screen__header {
+
+    max-width: 600px;
+    width: 600px;
+
+    min-height: 200px;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    align-items: center;
+
+
+    &--flag {
+      height: 6rem;
     }
 
-    .result__rank, .result__score {
+    &--title {
+      font-size: 3.5rem;
+      font-weight: bold;
       color: black;
     }
+  }
 
-    .result-wrap {
-      margin-left: 8rem;
-      font-size: 3rem;
-      color: #fff;
-      font-weight: bold;
-      align-self: start;
-      margin-top: 9rem;
-    }
+  .screen__photo {
+    height: 600px;
+    width: 600px;
+    min-width: 600px;
+    box-shadow: 0 0 20px #f39324;
+    margin-bottom: 2rem;
 
-    .game__icon {
-      height: 200px;
-    }
-
-    .game__text {
-      color: #f39324
-    }
-
-    .screen__info {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-      margin-right: 8rem;
-
-    }
-
-    .screen__header {
-
-      max-width: 600px;
-      width: 600px;
-
-      min-height: 200px;
-      display: grid;
-      grid-template-columns: 180px 1fr;
-      align-items: center;
-
-
-      &--flag {
-        height: 6rem;
-      }
-
-      &--title {
-        font-size: 3.5rem;
-        font-weight: bold;
-        color: black;
-      }
-    }
-
-    .screen__photo {
-      height: 600px;
-      width: 600px;
-      min-width: 600px;
-      box-shadow: 0 0 20px #f39324;
-      margin-bottom: 2rem;
-
-      img {
-        width: 100%;
-        object-fit: cover;
-      }
+    img {
+      width: 100%;
+      object-fit: cover;
     }
   }
 `;
