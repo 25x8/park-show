@@ -24,60 +24,61 @@ const WaitScreenSlideBase = ({className, winnerId}) => {
 
     return (
         <div className={`${className} screen-server`}>
-            <div className="result-wrap">
-                {allWinnerGames.map((result, index) => {
-                    return (
-                        <div className="modal__footer" key={index}>
-                            <div className="modal__footer--game">
-                                <div className="_game__icon">
-                                    <img src={result.game.image} alt=""/>
-                                </div>
-                                <div className="_game__name">
-                                    {result.game.name.ru}
-                                </div>
-                            </div>
-                            <div className="modal__footer--result">
-                                <div className="_game__text--year">{result.year} год</div>
-                                <div className="result__rank">
-                                    {result.rank} место
-                                </div>
-                                {winner.result &&
-                                <div className="result__score">
-                                    результат: {result.result}
-                                </div>
-                                }
-                            </div>
-                        </div>
-                    )
-                })}
-            </div>
-            <div className="screen screen__info">
-                <div className="screen screen__photo">
-                    {
-                        <img onError={setDefaultPhoto} src={winner.photo ? winner.photo : noPhoto} alt=""/>
-                    }
+            <div className="screen screen__header">
+                <div className="screen screen__header--flag">
+                    <img src={flag} alt=""/>
                 </div>
-                <div className="screen screen__header">
-                    <div className="screen screen__header--flag">
-                        <img src={flag} alt=""/>
-                    </div>
-                    <div className="screen screen__header--title">
-                        {winner.name.ru}
-                    </div>
+                <div className="screen screen__header--title">
+                    {winner.name.ru}
                 </div>
             </div>
+                <div className="screen screen__info">
+                    <div className="result-wrap">
+                        {allWinnerGames.map((result, index) => {
+                            return (
+                                <div className="modal__footer" key={index}>
+                                    <div className="modal__footer--game">
+                                        <div className="_game__icon">
+                                            <img src={result.game.image} alt=""/>
+                                        </div>
+                                        <div className="_game__name">
+                                            {result.game.name.ru}
+                                        </div>
+                                    </div>
+                                    <div className="modal__footer--result">
+                                        <div className="_game__text--year">{result.year} год</div>
+                                        <div className="result__rank">
+                                            {result.rank} место
+                                        </div>
+                                        {winner.result &&
+                                        <div className="result__score">
+                                            результат: {result.result}
+                                        </div>
+                                        }
+                                    </div>
+                                </div>
+                            )
+                        })}
+                    </div>
+
+                    <div className="screen screen__photo">
+                        {
+                            <img onError={setDefaultPhoto} src={winner.photo ? winner.photo : noPhoto} alt=""/>
+                        }
+                    </div>
+                </div>
+
         </div>
     )
 
 }
 
 export const WaitScreenSlide = styled(WaitScreenSlideBase)`
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 80vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  width: 100%;
 
 
   .modal__footer {
@@ -88,14 +89,17 @@ export const WaitScreenSlide = styled(WaitScreenSlideBase)`
       display: flex;
       flex-direction: column;
       position: relative;
+      margin-right: 1.5rem;
       
       ._game__name {
         color: black;
-        font-size: 2rem;
+        font-size: 1.2rem;
         width: 320px;
         top: 100%;
         position: absolute;
         text-align: center;
+        right: 50%;
+        transform: translateX(50%);
       }
     }
 
@@ -111,59 +115,56 @@ export const WaitScreenSlide = styled(WaitScreenSlideBase)`
   }
 
   .result-wrap {
-    margin-left: 8rem;
-    font-size: 3rem;
+    font-size: 2rem;
     color: #fff;
     font-weight: bold;
     align-self: start;
-    margin-top: 9rem;
   }
 
 
   ._game__icon {
-    height: 200px;
+    height: 150px;
   }
 
   ._game__text--year {
     font-size: 2rem;
-    color: #f39324
+    color: #fff;
   }
+  
+ 
 
   .screen__info {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
     align-items: center;
-    margin-right: 8rem;
-
   }
 
   .screen__header {
-
-    max-width: 600px;
-    width: 600px;
+    
+    margin: 0 3rem;
 
     min-height: 200px;
     display: grid;
-    grid-template-columns: 180px 1fr;
+    grid-template-columns: 150px 1fr;
     align-items: center;
 
 
     &--flag {
-      height: 6rem;
+      height: 5rem;
     }
 
     &--title {
-      font-size: 3.5rem;
+      font-size: 2.5rem;
       font-weight: bold;
       color: black;
     }
   }
 
   .screen__photo {
-    height: 600px;
-    width: 600px;
-    min-width: 600px;
+    height: 400px;
+    width: 400px;
+    min-width: 400px;
     box-shadow: 0 0 20px #f39324;
     margin-bottom: 2rem;
 

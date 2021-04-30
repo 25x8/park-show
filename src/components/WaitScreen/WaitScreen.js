@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {useSelector} from "react-redux";
 import {selectSortedWinnersIds} from "../../redux/feature/slices/winnersSlice";
+import {Carousel} from '3d-react-carousal';
 import background from '../../assets/images/background.png'
 
 import AliceCarousel from "react-alice-carousel";
@@ -125,17 +126,10 @@ const WaitScreenBase = ({className}) => {
     return (
         <div className={className}>
 
-            <AliceCarousel
-                infinite={true}
-                autoPlay={true}
-                autoPlayInterval={5000}
-                animationDuration={800}
-                animationType="fadeout"
-                disableButtonsControls={true}
-                disableDotsControls={true}
-                mouseTracking={true}
-                touchTracking={true}
-                items={ winnersWithPhoto.map(winnerId => {
+            <Carousel
+                autoplay={true}
+                interval={45000}
+                slides={ winnersWithPhoto.map(winnerId => {
                     return <WaitScreenSlide key={winnerId} winnerId={winnerId}/>
                 })}
         />
@@ -147,11 +141,45 @@ const WaitScreenBase = ({className}) => {
 export const WaitScreen = styled(WaitScreenBase)`
   height: 100vh;
   background: url(${background});
-  display: flex;
+  
+
   .alice-carousel__stage > li {
     div:first-child {
-
       align-items: center;
     }
+  }
+
+  .react-3d-carousel {
+    height: 100%!important;  
+  }
+  
+  .react-3d-carousel .slider-container {
+    top: 50%;
+  }
+
+  .slider-single-content {
+
+    
+    background: linear-gradient(90deg,rgba(244,244,244,0.82) 0%,#f5dfc6d1 30%,#f5dfc6d1 70%,rgba(244,244,244,0.82) 100%)
+  }
+  
+  .react-3d-carousel .slider-container .slider-content .slider-single .slider-single-content {
+    box-shadow: 0 0 10px rgb(150, 146, 146)
+  }
+  .react-3d-carousel .slider-container .slider-content .slider-single {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .react-3d-carousel .slider-container .slider-content .slider-single.proactive .slider-single-content {
+    transform: translateX(40%) scale(0.8);
+  }
+
+  .react-3d-carousel .slider-container .slider-content .slider-single.preactive .slider-single-content {
+    transform: translateX(-40%) scale(0.8);
+  }
+  
+  .slider-left, .slider-right {
+    display: none!important;
   }
 `;

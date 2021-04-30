@@ -8,35 +8,35 @@ import {WaitScreen} from "./components/WaitScreen/WaitScreen";
 
 function App() {
     const dispatch = useDispatch();
-    // const [afk, setAfk] = useState(false);
+    const [afk, setAfk] = useState(false);
 
     useEffect(() => {
         dispatch(fetchData())
     }, [])
 
-    // const handleOnIdle = event => {
-    //     setAfk(true);
-    // }
-    //
-    // const handleOnActive = event => {
-    //     setAfk(false);
-    // }
-    //
-    // const handleOnAction = event => {
-    //
-    // }
+    const handleOnIdle = event => {
+        setAfk(true);
+    }
 
-    // const {getRemainingTime, getLastActiveTime} = useIdleTimer({
-    //     timeout: 30000,
-    //     onIdle: handleOnIdle,
-    //     onActive: handleOnActive,
-    //     onAction: handleOnAction,
-    //     debounce: 500
-    // })
+    const handleOnActive = event => {
+        setAfk(false);
+    }
+
+    const handleOnAction = event => {
+
+    }
+
+    const {getRemainingTime, getLastActiveTime} = useIdleTimer({
+        timeout: 6000,
+        onIdle: handleOnIdle,
+        onActive: handleOnActive,
+        onAction: handleOnAction,
+        debounce: 500
+    })
     
     return (
         <div>
-            {/*{afk && <WaitScreen/>}*/}
+            {afk && <WaitScreen/>}
             <div className="App">
                 <WinnersPage/>
             </div>
