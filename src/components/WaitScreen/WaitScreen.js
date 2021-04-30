@@ -10,7 +10,6 @@ import {WaitScreenSlide} from "./WaitScreenSlide";
 const WaitScreenBase = ({className}) => {
     // const winnersIds = useSelector(state => selectSortedWinnersIds(state));
     const winnersWithPhoto = [
-        "10c035c7-4901-47b4-a068-726ae0fb11f6",
         "3c5e2c32-00f5-4b4c-89bb-7b5e5606adc9",
         "156f9139-be90-413d-b1dd-da7285677528",
         "cd9e2330-6d10-4d93-a848-f74ae72ba274",
