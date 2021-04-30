@@ -33,8 +33,10 @@ export const selectSortedWinnersIds = createSelector(
 
         winners.forEach(el => {
             if(!uniqNames.includes(el.name.ru)) {
-                uniqNames.push(el.name.ru);
-                uniqWinners.push(el);
+                if (!el.name.ru.includes('.')) {
+                    uniqNames.push(el.name.ru);
+                    uniqWinners.push(el);
+                }
             }
         })
 
