@@ -27,14 +27,13 @@ function App() {
     }
 
     const {getRemainingTime, getLastActiveTime} = useIdleTimer({
-        timeout: 60000,
+        timeout: 30000,
         onIdle: handleOnIdle,
         onActive: handleOnActive,
         onAction: handleOnAction,
         debounce: 500
     })
-
-
+    
     return (
         <div>
             {afk && <WaitScreen/>}

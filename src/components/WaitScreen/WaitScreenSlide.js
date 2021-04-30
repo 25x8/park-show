@@ -32,6 +32,9 @@ const WaitScreenSlideBase = ({className, winnerId}) => {
                                 <div className="_game__icon">
                                     <img src={result.game.image} alt=""/>
                                 </div>
+                                <div className="_game__name">
+                                    {result.game.name.ru}
+                                </div>
                             </div>
                             <div className="modal__footer--result">
                                 <div className="_game__text--year">{result.year} год</div>
@@ -79,6 +82,22 @@ export const WaitScreenSlide = styled(WaitScreenSlideBase)`
 
   .modal__footer {
     display: flex;
+    margin-bottom: 3rem;
+
+    &--game {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      
+      ._game__name {
+        color: black;
+        font-size: 2rem;
+        width: 320px;
+        top: 100%;
+        position: absolute;
+        text-align: center;
+      }
+    }
 
     &--result {
       display: flex;
