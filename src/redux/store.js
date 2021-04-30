@@ -4,6 +4,7 @@ import gamesReducer from "./feature/slices/gamesSlice";
 import countriesReducer from "./feature/slices/countrySlice";
 import countriesResultReducer from "./feature/slices/countriesResultSlice";
 import countriesCarouselReducer from "./feature/slices/countriesCarouselSlice";
+import afkReducer from "./feature/slices/afkSlice";
 
 const middleware = getDefaultMiddleware();
 
@@ -15,6 +16,7 @@ export default configureStore({
         countries: countriesReducer,
         countriesResult: countriesResultReducer,
         countriesCarousel: countriesCarouselReducer,
+        afk: afkReducer
     },
     middleware
 });

@@ -3,22 +3,30 @@ import background from '../../assets/images/background.png';
 import {WinnersList} from "./WinnersList/WinnersList";
 import {GamesList} from "./GamesList/GamesList";
 import {CountryList} from "./CountriesList/CountriesList";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {selectGamesIds} from "../../redux/feature/slices/gamesSlice";
 import {selectCountriesIds} from "../../redux/feature/slices/countrySlice";
 import {selectSortedWinnersIds} from "../../redux/feature/slices/winnersSlice";
+import {changeAfkState} from "../../redux/feature/slices/afkSlice";
 
 const WinnersPageBase = ({className}) => {
     const gameIds = useSelector(state => selectGamesIds(state));
     const countriesIds = useSelector(state => selectCountriesIds(state));
     const winnersIds = useSelector(state => selectSortedWinnersIds(state));
+    const dispatch = useDispatch();
 
 
     return (
         <div className={className}>
             <div className="section section__left">
                 <div className="section section__game">
-                    <div className="section__title">Конкурсы</div>
+                    <div
+                        className="section__title"
+                        onClick={() => {
+                            dispatch(changeAfkState(true));
+                        }}
+                    >
+                        Конкурсы</div>
                     <GamesList items={gameIds}/>
                 </div>
                 <div className="section section__countries">
