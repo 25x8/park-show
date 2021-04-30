@@ -128,7 +128,7 @@ const WaitScreenBase = ({className}) => {
 
             <Carousel
                 autoplay={true}
-                interval={45000}
+                interval={6000}
                 slides={ winnersWithPhoto.map(winnerId => {
                     return <WaitScreenSlide key={winnerId} winnerId={winnerId}/>
                 })}

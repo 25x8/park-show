@@ -128,7 +128,7 @@ export const WaitScreenSlide = styled(WaitScreenSlideBase)`
 
   ._game__text--year {
     font-size: 2rem;
-    color: #fff;
+    color: #f39324;
   }
   
  
@@ -165,7 +165,7 @@ export const WaitScreenSlide = styled(WaitScreenSlideBase)`
     height: 400px;
     width: 400px;
     min-width: 400px;
-    box-shadow: 0 0 20px #f39324;
+    box-shadow: 0 4px 20px #cac6c6;
     margin-bottom: 2rem;
 
     img {
