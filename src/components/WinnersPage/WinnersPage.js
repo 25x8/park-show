@@ -23,7 +23,7 @@ const WinnersPageBase = ({className}) => {
                     <div
                         className="section__title"
                         onClick={() => {
-                            dispatch(changeAfkState(true));
+                            // dispatch(changeAfkState(true));
                         }}
                     >
                         Конкурсы</div>
