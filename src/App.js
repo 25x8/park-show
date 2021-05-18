@@ -27,14 +27,14 @@ function App() {
 
     }
 
-     useIdleTimer({
-        timeout: 25000,
-        onIdle: handleOnIdle,
-        onActive: handleOnActive,
-        onAction: handleOnAction,
-        debounce: 500
-    })
-    
+    //  useIdleTimer({
+    //     timeout: 25000,
+    //     onIdle: handleOnIdle,
+    //     onActive: handleOnActive,
+    //     onAction: handleOnAction,
+    //     debounce: 500
+    // })
+
     return (
         <div>
             {afkState && <WaitScreen/>}
