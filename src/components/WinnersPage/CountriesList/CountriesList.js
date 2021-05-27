@@ -6,35 +6,35 @@ import {changeCountryItem} from "../../../redux/feature/slices/countriesCarousel
 import {selectCountriesCarouselItem} from "../../../redux/feature/slices/countriesCarouselSlice";
 import {useDispatch, useSelector} from "react-redux";
 
-const CountriesListBase = ({ items, openModal, setModalContent}) => {
+import Carousel, {autoplayPlugin, slidesToShowPlugin} from '@brainhubeu/react-carousel';
+import '@brainhubeu/react-carousel/lib/style.css';
+import './carousel-countries.scss';
+const CountriesListBase = ({items, openModal, setModalContent}) => {
 
     const dispatch = useDispatch();
     const currentItem = useSelector(state => selectCountriesCarouselItem(state));
 
     return (
-        <AliceCarousel
-            infinite={true}
-            autoPlay={true}
-            autoPlayInterval={0}
-            animationDuration={3000}
-            animationEasingFunction={'linear'}
-            disableButtonsControls={true}
-            activeIndex={currentItem}
-            disableDotsControls={true}
-            mouseTracking={true}
-            touchTracking={true}
-            onSlideChanged={e => {
-                dispatch(changeCountryItem(e.item))
-            }}
-            responsive={{
-                0: {
-                    items: 5
+        <Carousel
+            plugins={[
+                'infinite',
+                'centered',
+                {
+                    resolve: autoplayPlugin,
+                    options: {
+                        interval: 8050,
+                    }
                 },
-                1919: {
-                    items: 5
-                }
-            }}
-            items={
+                {
+                    resolve: slidesToShowPlugin,
+                    options: {
+                        numberOfSlides: 5,
+                    },
+                },
+            ]}
+            animationSpeed={8000}
+        >
+            {
                 items.map(id => {
                     return (
                         <CountryItem
@@ -45,8 +45,9 @@ const CountriesListBase = ({ items, openModal, setModalContent}) => {
                         />
                     )
                 })
-            }/>
+            }
 
+        </Carousel>
 
     )
 }

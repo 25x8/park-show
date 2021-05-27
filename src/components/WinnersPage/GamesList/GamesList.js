@@ -49,7 +49,7 @@ const GamesListBase = ({className, items}) => {
         vertical: true,
         autoplay: true,
         speed: 8000,
-        autoplaySpeed: 0,
+        autoplaySpeed: 50,
         cssEase: "linear",
     }
 

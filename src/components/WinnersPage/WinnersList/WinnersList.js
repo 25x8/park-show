@@ -10,7 +10,7 @@ const WinnersListBase = ({className, items}) => {
         vertical: true,
         autoplay: true,
         speed: 3000,
-        autoplaySpeed: 0,
+        autoplaySpeed: 50,
         cssEase: "linear",
     }
 
