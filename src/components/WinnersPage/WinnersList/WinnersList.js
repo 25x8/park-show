@@ -1,40 +1,49 @@
 import styled from "styled-components";
 import {WinnerItem} from "./WinnerItem";
-import Slider from 'react-slick';
+import {Swiper, SwiperSlide} from "swiper/react";
+import SwiperCore, { Autoplay, Mousewheel } from "swiper/core";
+import "swiper/swiper.min.css";
+import "swiper/components/pagination/pagination.min.css"
+import "./carousel-winners.scss";
+
+SwiperCore.use([Mousewheel, Autoplay]);
 
 const WinnersListBase = ({className, items}) => {
-    let sliderObject;
 
-    const settings = {
-        infinite: true,
-        vertical: true,
-        autoplay: true,
-        speed: 3000,
-        autoplaySpeed: 50,
-        cssEase: "linear",
-    }
 
     return (
         <div className={className}>
-            <Slider
-                {...settings}
-                ref={ref => {
-                    sliderObject = ref
+            <Swiper
+                spaceBetween={30}
+                direction={'vertical'}
+                className="mySwiper"
+                slidesPerView={10}
+                loop={true}
+                mousewheel={true}
+                onSlideChangeTransitionStart={(e) => {
+                    console.log(e.translate)
                 }}
+                autoplay={{
+                    delay: 0,
+                    disableOnInteraction: true,
+                    waitForTransition: false
+                }}
+
             >
-            {
-                items.map(item => {
-                    return (
-                        <WinnerItem
-                            key={item}
-                            winnerId={item}
-                            onModalClose={() => {
-                                sliderObject.slickPlay()
-                            }}
-                        />)
-                })
-            }
-            </Slider>
+                {
+                    items.map(item => {
+                        return (
+                            <SwiperSlide key={item}>
+                                <WinnerItem
+                                    winnerId={item}
+                                    onModalClose={() => {
+                                        // sliderObject.slickPlay()
+                                    }}
+                                />
+                            </SwiperSlide>)
+                    })
+                }
+            </Swiper>
         </div>
     )
 }
@@ -42,16 +51,16 @@ const WinnersListBase = ({className, items}) => {
 export const WinnersList = styled(WinnersListBase)`
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow: hidden;
   height: calc(100vh - 130px);
   font-size: 2rem;
 
   div:not(:last-of-type) {
     margin-bottom: 1rem;
   }
+
   .slick-arrow {
     display: none !important;
   }
-  
+
 `;
