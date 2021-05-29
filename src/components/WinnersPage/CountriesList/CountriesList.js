@@ -1,55 +1,66 @@
-import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import styled from "styled-components";
 import {CountryItem} from "./CountryItem";
-import {changeCountryItem} from "../../../redux/feature/slices/countriesCarouselSlice";
+
 import {selectCountriesCarouselItem} from "../../../redux/feature/slices/countriesCarouselSlice";
 import {useDispatch, useSelector} from "react-redux";
 
-import Carousel, {autoplayPlugin, slidesToShowPlugin} from '@brainhubeu/react-carousel';
-import '@brainhubeu/react-carousel/lib/style.css';
-import './carousel-countries.scss';
-const CountriesListBase = ({items, openModal, setModalContent}) => {
+
+import {Swiper, SwiperSlide} from "swiper/react";
+import SwiperCore, {Autoplay, Mousewheel} from "swiper/core";
+import "swiper/swiper.min.css";
+import "swiper/components/pagination/pagination.min.css"
+
+SwiperCore.use([Mousewheel, Autoplay]);
+
+const CountriesListBase = ({items, openModal, setModalContent, className}) => {
 
     const dispatch = useDispatch();
     const currentItem = useSelector(state => selectCountriesCarouselItem(state));
 
     return (
-        <Carousel
-            plugins={[
-                'infinite',
-                'centered',
-                {
-                    resolve: autoplayPlugin,
-                    options: {
-                        interval: 8050,
-                    }
-                },
-                {
-                    resolve: slidesToShowPlugin,
-                    options: {
-                        numberOfSlides: 5,
-                    },
-                },
-            ]}
-            animationSpeed={8000}
+        <Swiper
+            speed={7000}
+            className={className}
+            slidesPerView={5}
+            loop={true}
+            mousewheel={true}
+            autoplay={{
+                delay: 0,
+                disableOnInteraction: false,
+                waitForTransition: true
+            }}
+            onTouchStart={e => {
+                e.autoplay.stop()
+                // e.$wrapperEl[0].classList.add('swiper-touched')
+            }}
+            onTouchEnd={e => {
+                // e.$wrapperEl[0].classList.remove('swiper-touched')
+                e.autoplay.start()
+            }}
         >
             {
                 items.map(id => {
                     return (
-                        <CountryItem
-                            openModal={openModal}
-                            setModalContent={setModalContent}
-                            key={id}
-                            countryId={id}
-                        />
+                        <SwiperSlide key={id}>
+                            <CountryItem
+                                openModal={openModal}
+                                setModalContent={setModalContent}
+                                countryId={id}
+                            />
+                        </SwiperSlide>
                     )
                 })
             }
 
-        </Carousel>
+        </Swiper>
 
     )
 }
 
-export const CountryList = styled(CountriesListBase)``;
+export const CountryList = styled(CountriesListBase)`
+  .swiper-wrapper {
+    //transition-duration: 7000ms!important;
+    transition-timing-function: linear;
+  }
+`;

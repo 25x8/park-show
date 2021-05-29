@@ -1,10 +1,16 @@
 import styled from "styled-components";
 import {GameItem} from "./GameItem";
-import Slider from 'react-slick';
 import {useState} from "react";
 
+import {Swiper, SwiperSlide} from "swiper/react";
+import SwiperCore, {Autoplay, Mousewheel} from "swiper/core";
+import "swiper/swiper.min.css";
+import "swiper/components/pagination/pagination.min.css"
+import "./carousel.scss"
+
+SwiperCore.use([Mousewheel, Autoplay]);
+
 const GamesListBase = ({className, items}) => {
-    let sliderObject;
     const [show, setShow] = useState(false);
 
     const gameCard = (gameId) => {
@@ -13,7 +19,6 @@ const GamesListBase = ({className, items}) => {
                 key={gameId}
                 gameId={gameId}
                 setShowModal={(payload) => {
-                    sliderObject.slickPlay()
                     setShow(payload)
                 }}
             />
@@ -44,31 +49,41 @@ const GamesListBase = ({className, items}) => {
         )
     }
 
-    const settings = {
-        infinite: true,
-        vertical: true,
-        autoplay: true,
-        speed: 8000,
-        autoplaySpeed: 50,
-        cssEase: "linear",
-    }
-
 
     return (
         <div className={className}>
-            <Slider
-                ref={ref => {
-                    sliderObject = ref
+            <Swiper
+                speed={7000}
+                direction={'vertical'}
+                className="mySwiper"
+                slidesPerView={3}
+                loop={true}
+                mousewheel={true}
+                autoplay={{
+                    delay: 0,
+                    disableOnInteraction: false,
+                    waitForTransition: true
                 }}
-                {...settings}
+                onTouchStart={e => {
+                    e.autoplay.stop()
+                    // e.$wrapperEl[0].classList.add('swiper-touched')
+                }}
+                onTouchEnd={e => {
+                    // e.$wrapperEl[0].classList.remove('swiper-touched')
+                    e.autoplay.start()
+                }}
             >
                 {
                     getCardRow().map((row, index) => {
-                        return <CardRow key={index} rowItems={row}/>
+                        return (
+                            <SwiperSlide key={index}>
+                                <CardRow rowItems={row}/>
+                            </SwiperSlide>
+                        )
                     })
                 }
 
-            </Slider>
+            </Swiper>
         </div>
     )
 }
@@ -76,11 +91,23 @@ const GamesListBase = ({className, items}) => {
 export const GamesList = styled(GamesListBase)`
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow: hidden;
   position: relative;
   height: 70vh !important;
-
+  
+  .swiper-container {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  
+  .swiper-wrapper {
+    //transition-duration: 7000ms!important;
+    transition-timing-function: linear;
+  }
+  
+  .swiper-touched {
+    //transition-duration: 0ms!important;
+  }
   .row-card {
     display: flex;
     justify-content: space-around;

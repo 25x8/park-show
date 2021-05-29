@@ -73,6 +73,8 @@ export const WinnersPage = styled(WinnersPageBase)`
 
   .section__countries {
     margin-top: 6rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
   }
 
 `;

@@ -15,14 +15,12 @@ const WinnersListBase = ({className, items}) => {
         <div className={className}>
             <Swiper
                 spaceBetween={30}
+                speed={2500}
                 direction={'vertical'}
                 className="mySwiper"
                 slidesPerView={10}
                 loop={true}
                 mousewheel={true}
-                onSlideChangeTransitionStart={(e) => {
-                    console.log(e.translate)
-                }}
                 autoplay={{
                     delay: 0,
                     disableOnInteraction: false,
@@ -30,13 +28,12 @@ const WinnersListBase = ({className, items}) => {
                 }}
                 onTouchStart={e => {
                     e.autoplay.stop()
-                    e.$wrapperEl[0].classList.add('swiper-touched')
+                    // e.$wrapperEl[0].classList.add('swiper-touched')
                 }}
                 onTouchEnd={e => {
-                    e.$wrapperEl[0].classList.remove('swiper-touched')
+                    // e.$wrapperEl[0].classList.remove('swiper-touched')
                     e.autoplay.start()
                 }}
-
             >
                 {
                     items.map(item => {
@@ -62,6 +59,14 @@ export const WinnersList = styled(WinnersListBase)`
   overflow: hidden;
   height: calc(100vh - 130px);
   font-size: 2rem;
+  
+  .swiper-wrapper {
+    transition-timing-function: linear;
+  }
+
+  .swiper-touched {
+    transition-duration: 0ms!important;
+  }
 
   div:not(:last-of-type) {
     margin-bottom: 1rem;
