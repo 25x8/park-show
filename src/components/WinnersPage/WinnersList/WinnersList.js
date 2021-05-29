@@ -25,8 +25,15 @@ const WinnersListBase = ({className, items}) => {
                 }}
                 autoplay={{
                     delay: 0,
-                    disableOnInteraction: true,
+                    disableOnInteraction: false,
                     waitForTransition: false
+                }}
+                onTouchStart={e => {
+                    e.autoplay.stop()
+                }}
+                onTouchEnd={e => {
+                    console.log(e)
+                    e.autoplay.start()
                 }}
 
             >
