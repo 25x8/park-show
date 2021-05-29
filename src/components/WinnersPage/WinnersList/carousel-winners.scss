@@ -2,3 +2,7 @@
   transition-duration: 2500ms!important;
   transition-timing-function: linear;
 }
+
+.swiper-touched {
+  transition-duration: 0ms!important;
+}

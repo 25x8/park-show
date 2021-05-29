@@ -30,9 +30,10 @@ const WinnersListBase = ({className, items}) => {
                 }}
                 onTouchStart={e => {
                     e.autoplay.stop()
+                    e.$wrapperEl[0].classList.add('swiper-touched')
                 }}
                 onTouchEnd={e => {
-                    console.log(e)
+                    e.$wrapperEl[0].classList.remove('swiper-touched')
                     e.autoplay.start()
                 }}
 
