@@ -20,6 +20,7 @@ const WinnersListBase = ({className, items}) => {
                 className="mySwiper"
                 slidesPerView={10}
                 loop={true}
+                centeredSlides={true}
                 mousewheel={true}
                 autoplay={{
                     delay: 0,
@@ -38,7 +39,8 @@ const WinnersListBase = ({className, items}) => {
                 {
                     items.map(item => {
                         return (
-                            <SwiperSlide key={item}>
+                            <SwiperSlide
+                                key={item}>
                                 <WinnerItem
                                     winnerId={item}
                                     onModalClose={() => {
@@ -63,15 +65,15 @@ export const WinnersList = styled(WinnersListBase)`
   .swiper-wrapper {
     transition-timing-function: linear;
   }
+  
+  .swiper-slide {
+    height: auto!important;
+  }
 
   .swiper-touched {
     transition-duration: 0ms!important;
   }
-
-  div:not(:last-of-type) {
-    margin-bottom: 1rem;
-  }
-
+  
   .slick-arrow {
     display: none !important;
   }
