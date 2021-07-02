@@ -261,7 +261,7 @@ export const GameRanks = styled(GameRanksBase)`
   .country__name {
     position: absolute;
     font-size: 1.5rem;
-    width: 120%;
+    width: 110%;
     left: -10%;
     overflow-wrap: anywhere;
   }

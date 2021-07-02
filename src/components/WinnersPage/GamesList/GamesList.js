@@ -13,6 +13,7 @@ SwiperCore.use([Mousewheel, Autoplay]);
 const GamesListBase = ({className, items}) => {
     const [show, setShow] = useState(false);
 
+
     const gameCard = (gameId) => {
         return (
             <GameItem
@@ -49,6 +50,11 @@ const GamesListBase = ({className, items}) => {
         )
     }
 
+    const startAnimate = (e) => {
+        e.slideToClosest(7000)
+        console.log(e)
+    }
+
 
     return (
         <div className={className}>
@@ -59,10 +65,11 @@ const GamesListBase = ({className, items}) => {
                 slidesPerView={3}
                 loop={true}
                 mousewheel={true}
+                onAfterInit={startAnimate}
                 autoplay={{
                     delay: 0,
                     disableOnInteraction: false,
-                    waitForTransition: true
+                    waitForTransition: false
                 }}
                 onTouchStart={e => {
                     e.autoplay.stop()
