@@ -1,6 +1,6 @@
 import {Modal} from 'react-responsive-modal';
 import 'react-responsive-modal/styles.css';
-import './modal-fix-style.scss'
+import './modal-fix-style.css'
 
 export const ModalDialog = ({ content, openState, close}) => {
     return (

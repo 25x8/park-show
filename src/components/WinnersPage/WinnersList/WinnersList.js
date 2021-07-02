@@ -4,7 +4,7 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import SwiperCore, { Autoplay, Mousewheel } from "swiper/core";
 import "swiper/swiper.min.css";
 import "swiper/components/pagination/pagination.min.css"
-import "./carousel-winners.scss";
+import "./carousel-winners.css";
 
 SwiperCore.use([Mousewheel, Autoplay]);
 
