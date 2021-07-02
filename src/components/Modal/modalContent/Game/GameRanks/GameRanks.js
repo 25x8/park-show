@@ -190,6 +190,7 @@ export const GameRanks = styled(GameRanksBase)`
 
   .country {
     text-align: center;
+    margin: 0 1rem;
   }
 
   .country__row {
@@ -251,7 +252,7 @@ export const GameRanks = styled(GameRanksBase)`
 
   .country__winners {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 30% 1fr 29%;
     align-items: start;
     overflow: auto;
     max-height: 170px;
@@ -268,7 +269,7 @@ export const GameRanks = styled(GameRanksBase)`
   .winner-item {
     font-size: 1.5rem;
     margin-bottom: 1.2rem;
-    text-align: center;
+    text-align: left;
   }
   
   .country__pedestal{
