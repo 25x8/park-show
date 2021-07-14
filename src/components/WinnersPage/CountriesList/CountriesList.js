@@ -2,10 +2,6 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 import styled from "styled-components";
 import {CountryItem} from "./CountryItem";
 
-import {selectCountriesCarouselItem} from "../../../redux/feature/slices/countriesCarouselSlice";
-import {useDispatch, useSelector} from "react-redux";
-
-
 import {Swiper, SwiperSlide} from "swiper/react";
 import SwiperCore, {Autoplay, Mousewheel} from "swiper/core";
 import "swiper/swiper.min.css";
@@ -15,8 +11,7 @@ SwiperCore.use([Mousewheel, Autoplay]);
 
 const CountriesListBase = ({items, openModal, setModalContent, className}) => {
 
-    const dispatch = useDispatch();
-    const currentItem = useSelector(state => selectCountriesCarouselItem(state));
+
 
     return (
         <Swiper
@@ -60,7 +55,6 @@ const CountriesListBase = ({items, openModal, setModalContent, className}) => {
 
 export const CountryList = styled(CountriesListBase)`
   .swiper-wrapper {
-    //transition-duration: 7000ms!important;
     transition-timing-function: linear;
   }
 `;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import noPhoto from '../../../assets/images/no-photo.jpg'
 import {useSelector} from "react-redux";
 import {selectWinnerByName, selectWinnersById} from "../../../redux/feature/slices/winnersSlice";
-import {selectGameByArrayOfId, selectGameIconAndNameById} from "../../../redux/feature/slices/gamesSlice";
+import {selectGameByArrayOfId} from "../../../redux/feature/slices/gamesSlice";
 import {selectCountryFlag} from "../../../redux/feature/slices/countrySlice";
 
 const WinnerContentBase = ({className, winnerId}) => {

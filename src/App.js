@@ -1,10 +1,10 @@
 import {WinnersPage} from "./components/WinnersPage/WinnersPage";
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchData} from "./redux/feature/fetchData";
-import {useIdleTimer} from "react-idle-timer";
+// import {useIdleTimer} from "react-idle-timer";
 import {WaitScreen} from "./components/WaitScreen/WaitScreen";
-import {changeAfkState, selectAfkState} from "./redux/feature/slices/afkSlice";
+import {selectAfkState} from "./redux/feature/slices/afkSlice";
 
 
 function App() {
@@ -13,19 +13,19 @@ function App() {
 
     useEffect(() => {
         dispatch(fetchData())
-    }, [])
+    })
 
-    const handleOnIdle = event => {
-        dispatch(changeAfkState(true));
-    }
+    // const handleOnIdle = event => {
+    //     dispatch(changeAfkState(true));
+    // }
 
-    const handleOnActive = event => {
-        dispatch(changeAfkState(false));
-    }
-
-    const handleOnAction = event => {
-
-    }
+    // const handleOnActive = event => {
+    //     dispatch(changeAfkState(false));
+    // }
+    //
+    // const handleOnAction = event => {
+    //
+    // }
 
     //  useIdleTimer({
     //     timeout: 25000,

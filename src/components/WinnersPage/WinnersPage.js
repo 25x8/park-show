@@ -3,17 +3,17 @@ import background from '../../assets/images/background.png';
 import {WinnersList} from "./WinnersList/WinnersList";
 import {GamesList} from "./GamesList/GamesList";
 import {CountryList} from "./CountriesList/CountriesList";
-import {useDispatch, useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 import {selectGamesIds} from "../../redux/feature/slices/gamesSlice";
 import {selectCountriesIds} from "../../redux/feature/slices/countrySlice";
 import {selectSortedWinnersIds} from "../../redux/feature/slices/winnersSlice";
-import {changeAfkState} from "../../redux/feature/slices/afkSlice";
+
 
 const WinnersPageBase = ({className}) => {
     const gameIds = useSelector(state => selectGamesIds(state));
     const countriesIds = useSelector(state => selectCountriesIds(state));
     const winnersIds = useSelector(state => selectSortedWinnersIds(state));
-    const dispatch = useDispatch();
+
 
 
     return (

@@ -11,7 +11,7 @@ import "./carousel.css"
 SwiperCore.use([Mousewheel, Autoplay]);
 
 const GamesListBase = ({className, items}) => {
-    const [show, setShow] = useState(false);
+    const [, setShow] = useState(false);
 
 
     const gameCard = (gameId) => {

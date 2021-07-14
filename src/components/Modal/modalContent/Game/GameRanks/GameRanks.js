@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import piedestal from '../../../../../assets/images/piedestal.png';
-import {selectCountryById} from "../../../../../redux/feature/slices/countrySlice";
 import {selectTwoCountriesByIds} from "../../../../../redux/feature/slices/countrySlice";
 import {useSelector} from "react-redux";
 import {selectWinnersByCountryIdYearAndGameId} from "../../../../../redux/feature/slices/winnersSlice";
