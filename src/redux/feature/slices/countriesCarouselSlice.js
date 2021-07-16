@@ -1,4 +1,4 @@
-git import {
+import {
     createSlice
 } from "@reduxjs/toolkit";
 
